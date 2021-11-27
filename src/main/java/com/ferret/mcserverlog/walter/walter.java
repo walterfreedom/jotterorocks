@@ -21,7 +21,7 @@ public class walter {
         while (sc.hasNextLine())
             data = data+"\n"+sc.nextLine();
         data= data.replaceAll("\\d*\\.\\d*\\.\\d*\\.\\d*", "[REDACTED]");
-        data= data.replaceAll("\\[\\d*:\\d*:\\d*\\]*", "\n \n");
+        data= data.replaceAll("\\[\\d*:\\d*:\\d*\\]*", "\n");
 
         theModel.addAttribute("verycoolattribute", data);
         return "pog";
