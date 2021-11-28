@@ -10,4 +10,5 @@ public class McserverlogApplication {
         SpringApplication.run(McserverlogApplication.class, args);
     }
 
+
 }

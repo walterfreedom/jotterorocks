@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <title>
+        😎😎😎😎😎😎
+    </title>
+</head>
+<body style="background-color: gray">
+<form action="#" th:action="@{/mac.html/}" th:object="${macmodel}" method="post">
+    <p>FPS: <input type="text" th:field="*{fps}" /></p>
+    <p>Kwh: <input type="text" th:field="*{kwh}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>

@@ -2,17 +2,14 @@ package com.ferret.mcserverlog.walter;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Scanner;
 @Controller
 public class walter {
 
-    @GetMapping("/walter")
+    @RequestMapping("/walter")
     public String getWalter(Model theModel) throws FileNotFoundException {
         //😎
         String data = "";
@@ -25,9 +22,5 @@ public class walter {
 
         theModel.addAttribute("verycoolattribute", data);
         return "pog";
-    }
-    @GetMapping("/ferret")
-    public String getFerret(){
-        return  "Ferret";
     }
 }
