@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ferret</groupId>
-    <artifactId>mcserverlog</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>JotteroRocks</artifactId>
+    <version>jottero.0.0.4</version>
     <name>mcserverlog</name>
-    <description>mcserverlog</description>
+    <description>It rocks!</description>
     <properties>
         <java.version>11</java.version>
     </properties>
