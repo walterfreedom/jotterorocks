@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🦆 6J0T33R0</title>
+    <title>🦆 12J0T33R0</title>
 </head>
 <body style="background-image: url(img/goosebackground.png); background-repeat: no-repeat; background-size: 100%;">
     <script type="text/javascript">
@@ -12,16 +12,42 @@
         function honk(){
             //script for cool goose sound
             count++;
-            
             var honkAudio = new Audio("sound/goosehonk.mp3")
             document.getElementById("honkcount").innerHTML = "honk = "+count;
             honkAudio.play();
-            
+
+            //part that sets the door to visible
+            if(count==12){
+                document.getElementById("enterance").style.visibility="visible";
+            }
+
+            //pls stop looking at my script
+        }
+
+        function key(){
+            document.getElementById("door").style.visibility="hidden";
+            document.getElementById("password").style.visibility="visible";
+        }
+
+        function checkPassword(){
+            var input=document.getElementById("password").innerText;
+        if(input="12J0T33R0"){
+            window.location.href = "img/melonmusk.png"
+        }
         }
     </script>
-<div style="position: absolute; margin-top: 20%; margin-left: 35%; user-zoom: fixed;">
-    <h1 id="honkcount" style="color: black; margin-left: 19%;">cool goose</h1>
-    <input type="image" style="user-zoom: fixed;" src="img/goose.png" onclick="honk()">
-</div>
+    <div style="position: absolute; margin-top: 20%; margin-left: 35%; user-zoom: fixed;">
+        <h1 id="honkcount" style="color: black; margin-left: 19%;">cool goose</h1>
+        <input type="image" style="user-zoom: fixed;" src="img/goose.png" onclick="honk()">
+    </div>
+
+    <div id="enterance" style="margin-left: 5%; margin-top: 5%; visibility: hidden">
+        <input id="door" type="image" src="img/door.png" style="height: 10%;width: 10%" onclick="key()">
+        <div id="password" style="visibility: hidden">
+            <input id="passwordtext" type="text">
+            <input type="submit" value="???" onclick="checkPassword()">
+        </div>
+    </div>
+
 </body>
 </html>
