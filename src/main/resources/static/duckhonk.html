@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🦆 6J0T33R0</title>
 </head>
-<body style="background-color: green;">
-    <input type="image" src="img/honk.png" style="margin: 10%;">
+<body style="background-image: url(img/goosebackground.png); background-repeat: no-repeat; background-size: 100%;">
+    <script type="text/javascript">
+        let count = 0
+        function honk(){
+            console.log("working")
+            count++;
+            document.getElementById("honkcount").innerHTML = "honk = "+count;
+        }
+    </script>
+<div style="position: absolute; margin-top: 35%; margin-left: 35%; user-zoom: fixed;">
+    <h1 id="honkcount" style="color: black; margin-left: 19%;">cool goose</h1>
+    <input type="image" style="user-zoom: fixed;" src="img/honk.png" onclick="honk()">
+</div>
 </body>
 </html>
