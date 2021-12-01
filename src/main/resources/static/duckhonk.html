@@ -10,14 +10,18 @@
     <script type="text/javascript">
         let count = 0
         function honk(){
-            console.log("working")
+            //script for cool goose sound
             count++;
+            
+            var honkAudio = new Audio("sound/goosehonk.mp3")
             document.getElementById("honkcount").innerHTML = "honk = "+count;
+            honkAudio.play();
+            
         }
     </script>
-<div style="position: absolute; margin-top: 35%; margin-left: 35%; user-zoom: fixed;">
+<div style="position: absolute; margin-top: 20%; margin-left: 35%; user-zoom: fixed;">
     <h1 id="honkcount" style="color: black; margin-left: 19%;">cool goose</h1>
-    <input type="image" style="user-zoom: fixed;" src="img/honk.png" onclick="honk()">
+    <input type="image" style="user-zoom: fixed;" src="img/goose.png" onclick="honk()">
 </div>
 </body>
 </html>
