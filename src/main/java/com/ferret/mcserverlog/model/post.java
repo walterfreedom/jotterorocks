@@ -62,6 +62,16 @@ public class post {
     }
 
     @Override
+    public String toString() {
+        return "post{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", categories=" + categories +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

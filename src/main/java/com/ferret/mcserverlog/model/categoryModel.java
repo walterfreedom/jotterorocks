@@ -48,6 +48,15 @@ public class categoryModel {
     }
 
     @Override
+    public String toString() {
+        return "categoryModel{" +
+                "id=" + id +
+                ", category='" + category + '\'' +
+                ", posts=" + posts +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
