@@ -3,6 +3,7 @@ package com.ferret.mcserverlog.model;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 @Entity
 public class post {
@@ -17,13 +18,12 @@ public class post {
     @ManyToMany
     @JoinTable(name="post_categoryModel", joinColumns = @JoinColumn(name="post_id"),
     inverseJoinColumns = @JoinColumn(name="categoryModel_id"))
-    private Set<categoryModel> categories;
+    private Set<categoryModel> categories = new HashSet<>();
 
 
-    public post(String title, String content, Set<categoryModel> categories) {
+    public post(String title, String content) {
         this.title = title;
         this.content = content;
-        this.categories = categories;
     }
 
     public post() {

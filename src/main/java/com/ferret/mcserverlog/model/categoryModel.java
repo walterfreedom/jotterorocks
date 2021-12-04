@@ -1,6 +1,7 @@
 package com.ferret.mcserverlog.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 @Entity
 public class categoryModel {
@@ -13,14 +14,13 @@ public class categoryModel {
     private String category;
 
     @ManyToMany(mappedBy = "categories")
-    private Set<post> posts;
+    private Set<post> posts = new HashSet<>();
 
     public categoryModel() {
     }
 
-    public categoryModel(String category, Set<post> posts) {
+    public categoryModel(String category) {
         this.category = category;
-        this.posts = posts;
     }
 
     public String getCategory() {
