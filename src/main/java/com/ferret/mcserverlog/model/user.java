@@ -1,6 +1,15 @@
 package com.ferret.mcserverlog.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table
 public class user {
+    @Id
+    @SequenceGenerator(name = "user_sequence",
+            sequenceName = "user_sequence",
+            allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "user_sequence")
     private Long id;
     private String username;
     private String password;
@@ -10,6 +19,7 @@ public class user {
     }
 
     public user(Long id, String username, String password, String email) {
+
         this.id = id;
         this.username = username;
         this.password = password;
