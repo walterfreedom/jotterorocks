@@ -1,4 +1,4 @@
-package com.ferret.mcserverlog.model;
+package com.ferret.mcserverlog.trashbin;
 
 import javax.persistence.*;
 
