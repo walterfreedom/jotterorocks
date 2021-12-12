@@ -31,5 +31,6 @@ public class bootStrapData implements CommandLineRunner {
 
         System.out.println("Started bootstrap");
         System.out.println("Number of categories: "+ categoryModelRepo.count());
+        System.out.println("fact:" + postRepo.findAll());
     }
 }
